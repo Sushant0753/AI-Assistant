@@ -1,31 +1,3 @@
-// "use client";
-
-// import ChatInput from "@/components/ChatInput"; 
-// import Sidebar from "@/components/Sidebar";
-// import ProfileIcon from "@/components/ProfileIcon";
-// import { useChatMessage } from "@/hooks/useChatMessage";
-
-// export default function Home() {
-//   const { sendUserMessage } = useChatMessage();
-
-//   return (
-//     <div className="h-screen w-screen bg-dots text-white">
-//       <Sidebar />
-//       <ProfileIcon />
-
-//       <main className="ml-16 h-full">
-//         <div className="h-full flex flex-col items-center justify-center px-4">
-//           <h1 className="text-4xl font-bold text-blue-400 mb-10">Hi Sushant</h1>
-          
-//           {/* ChatInput now manages its own state and functionality */}
-//           <ChatInput sendUserMessage={sendUserMessage} />
-//         </div>
-//       </main>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useChatMessage } from "@/hooks/useChatMessage";
