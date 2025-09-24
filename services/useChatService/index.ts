@@ -5,13 +5,13 @@ export function useChatService() {
 
   const sendMessage = async (
     message: string,
-    file: File | null,
+    documentId: string | undefined,
     onStream: (chunk: string) => void,
     onFinish: () => void
   ) => {
     const formData = new FormData();
     formData.append("query", message);
-    if (file) formData.append("file", file);
+    if (documentId) formData.append("document_id", documentId);
 
     await streamMessage(`${BACKEND_URL}/chat`, formData, onStream, onFinish);
   };
