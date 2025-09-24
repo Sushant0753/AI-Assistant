@@ -3,7 +3,6 @@
 import React, { useRef, useState } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import { FiPlus, FiArrowUp, FiX, FiFileText } from "react-icons/fi";
-import { useRouter, usePathname } from "next/navigation";
 
 type ChatInputProps = {
   sendUserMessage: (text: string, file: File | null) => void;
@@ -12,12 +11,8 @@ type ChatInputProps = {
 const ChatInput: React.FC<ChatInputProps> = ({ sendUserMessage }) => {
   const [value, setValue] = useState("");
   const [fileName, setFileName] = useState<string | null>(null);
-
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const attachmentRef = useRef<File | null>(null);
-
-  const router = useRouter();
-  const pathname = usePathname();
 
   const hasText = value.trim().length > 0;
 
@@ -27,14 +22,13 @@ const ChatInput: React.FC<ChatInputProps> = ({ sendUserMessage }) => {
 
   const handleSubmit = () => {
     if (!value.trim() && !attachmentRef.current) return;
-
     sendUserMessage(value, attachmentRef.current);
+
+    // Reset input & file
     setValue("");
     attachmentRef.current = null;
     setFileName(null);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
+    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
@@ -51,7 +45,6 @@ const ChatInput: React.FC<ChatInputProps> = ({ sendUserMessage }) => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
-
     attachmentRef.current = file;
     setFileName(file.name);
   };
@@ -59,15 +52,12 @@ const ChatInput: React.FC<ChatInputProps> = ({ sendUserMessage }) => {
   const handleRemoveFile = () => {
     attachmentRef.current = null;
     setFileName(null);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
+    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
   return (
     <div className="w-full max-w-3xl mx-auto px-4">
       <div className="bg-neutral-800 rounded-2xl border border-neutral-700 flex flex-col justify-between px-4 py-3 min-h-18">
-        {/* Show file if uploaded */}
         {fileName && (
           <div className="relative inline-flex items-center gap-2 text-sm text-neutral-200 mb-2 bg-neutral-700 px-2 py-2 rounded-full shadow max-w-48">
             <FiFileText size={16} className="text-neutral-300" />
