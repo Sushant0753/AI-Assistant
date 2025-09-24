@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Assistant
+
+AI-Assistant is an intelligent assistant built primarily with TypeScript that aims to provide smart, interactive features to users through a web interface. This repository leverages modern frontend technologies and AI-powered logic to deliver a seamless user experience.
+
+## Features
+
+- **Conversational AI:** Engage in dynamic conversations with the assistant.
+- **Smart Suggestions:** Get relevant suggestions and actions based on your queries.
+- **Extensible Design:** Easily add new skills, plugins, or integrations.
+- **Modern UI:** Clean, responsive, and user-friendly interface using CSS and JavaScript.
+- **TypeScript Powered:** Written in TypeScript for type safety and maintainability.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- [Node.js](https://nodejs.org/) (v16 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sushant0753/AI-Assistant.git
+   cd AI-Assistant
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running Locally
+
+Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/` - Main source code (TypeScript, logic, and components)
+- `public/` - Static assets
+- `styles/` - CSS files
+- `package.json` - Project configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+This project is deployed at: [https://ai-assistant-seven-beta.vercel.app/](https://ai-assistant-seven-beta.vercel.app/)
 
-To learn more about Next.js, take a look at the following resources:
+## Development Status
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I'm currently working on the backend to enhance functionality and add new features. Stay tuned for updates!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contribution
 
-## Deploy on Vercel
+Contributions are welcome! To contribute:
+1. Fork the repo
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please follow the existing code style and conventions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Author:** [Sushant0753](https://github.com/Sushant0753)
