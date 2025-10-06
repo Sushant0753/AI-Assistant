@@ -31,11 +31,11 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen bg-dots text-white">
-      <main className="ml-16 h-full">
-        <div className="h-full flex flex-col items-center justify-center px-4">
-          <h1 className="text-4xl font-bold text-blue-400 mb-10">How can I help you today?</h1>
-          <ChatInput sendUserMessage={handleSend} />
-        </div>
+      <main className="h-full flex flex-col items-center justify-center px-2 sm:px-4 md:ml-16">
+        <h1 className="text-2xl sm:text-4xl font-bold text-blue-400 mb-6 sm:mb-10 text-center">
+          How can I help you today?
+        </h1>
+        <ChatInput sendUserMessage={handleSend} />
       </main>
     </div>
   );
