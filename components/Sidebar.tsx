@@ -56,7 +56,7 @@ const Sidebar = () => {
     <div className="flex flex-col items-start gap-2 px-2 pt-5">
       {/* Menu button */}
       <button
-        className="flex items-center text-neutral-400 hover:text-white transition-colors cursor-pointer ml-4 py-2 w-full"
+        className="flex items-center text-neutral-400 hover:text-white transition-colors cursor-ew-resize ml-4 py-2 w-full"
         onClick={handleMenuClick}
         title="Menu"
       >
