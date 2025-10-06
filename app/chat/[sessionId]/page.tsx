@@ -50,7 +50,8 @@ export default function ChatPage() {
         {messages.map((msg: ChatMessage) => (
           <div
             key={msg.id}
-            className={`flex ${msg.isUser ? "justify-end" : "justify-start"}`}
+            className={`flex ${msg.isUser ? "justify-end" : "justify-start"}
+            w-full`}
           >
             <div
               className={`
