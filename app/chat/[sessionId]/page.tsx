@@ -50,12 +50,10 @@ export default function ChatPage() {
         {messages.map((msg: ChatMessage) => (
           <div
             key={msg.id}
-            className={`flex ${msg.isUser ? "justify-end" : "justify-start"}
-            w-full`}
+            className={`flex ${msg.isUser ? "justify-end" : "justify-start"}`}
           >
             <div
               className={`
-                w-full
                 max-w-[90%] sm:max-w-[80%] md:max-w-[60%]
                 ${msg.isUser ? "" : "space-y-2"}
               `}
@@ -66,7 +64,7 @@ export default function ChatPage() {
                   rounded-2xl px-4 py-2 shadow break-words inline-block
                   ${msg.isUser
                     ? "bg-blue-600 text-white"
-                    : "bg-neutral-800 text-neutral-200 inline-block"}
+                    : "bg-neutral-800 text-neutral-200"}
                 `}
               >
                 <p className="whitespace-pre-wrap break-words">{msg.text}</p>
