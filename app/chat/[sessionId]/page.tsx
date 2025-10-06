@@ -62,7 +62,7 @@ export default function ChatPage() {
               {/* Message content */}
               <div
                 className={`
-                  rounded-2xl px-4 py-2 shadow break-words
+                  rounded-2xl px-4 py-2 shadow break-words inline-block w-auto
                   ${msg.isUser
                     ? "bg-blue-600 text-white"
                     : "bg-neutral-800 text-neutral-200 inline-block"}
